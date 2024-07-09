@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv='Content-type' content='text/html; charset=euc-kr'>
+<style>
+td,body{font-size:12px;font-family:돋움,dotum;color:#2D2C2D}img{border:none}
+</style>
+
+</head>
+
+<body bgcolor=#ffffff leftmargin=5 topmargin=0>
+<script language>
+function premier(n) {
+    for(var i = 1; i < 4; i++) {
+        obj = document.getElementById('premier'+i);
+        img = document.getElementById('premier_button'+i);
+        if ( n == i ) {
+            obj.style.display = "block";
+                        img.height = 21;
+            img.src = "http://imgnews.naver.com/image/news/2004n/tab11on"+i+".gif";    
+        } else {
+            obj.style.display = "none";
+                        img.height = 19;
+            img.src = "http://imgnews.naver.com/image/news/2004n/tab11off"+i+".gif";
+        }
+    }
+}
+</script>
+ 
+<table width=226 border=0 cellpadding=0 cellspacing=0 bgcolor=#EEEFF0>
+<tr><td width=1 bgcolor=#ffffff></td><td width=224></td><td width=1 bgcolor=#ffffff></td></tr>
+<tr><td height=4></td></tr>
+<tr>
+        <td colspan=3 align=center>
+                <table width=216 border=0 cellpadding=0 cellspacing=0 bgcolor=#EEEFF0>
+                <tr valign=bottom>
+                        <td><img src=http://imgnews.naver.com/image/news/2004n/tab11on.gif width=62 height=22 OnClick='premier(1);' OnMouseOver='this.style.cursor="hand";premier(1);' OnMouseOut='this.style.cursor="default"' id='premier_button1'></a></td>
+                        <td width=1 style='border-bottom:1px solid #B7B19F'><img width=1 height=1></td>
+                        <td><img src=http://imgnews.naver.com/image/news/2004n/tab11off1.gif width=82 height=19 OnClick='premier(2);' OnMouseOver='this.style.cursor="hand";premier(2);' OnMouseOut='this.style.cursor="default"' id='premier_button2'></a></td>
+                        <td width=1 style='border-bottom:1px solid #B7B19F'><img width=1 height=1></td>
+                        <td><img src=http://imgnews.naver.com/image/news/2004n/tab11off2.gif width=70 height=19 OnClick='premier(3);' OnMouseOver='this.style.cursor="hand";premier(3);' OnMouseOut='this.style.cursor="default"' id='premier_button3'></a></td>
+                </tr>
+                </table>
+                <table width=216 border=0 cellpadding=0 cellspacing=0 bgcolor=#ffffff>
+                <tr>
+                        <td width=1 bgcolor=#B7B19F></td>
+                    <td width=214>
+
+                        <p><span id='premier1' style='display:none;'>
+네이버 뉴스 탭 메뉴<p>클릭해야 메뉴를 바뀌게 하려면 OnMouseOver를 Onclick로 바꿔주면 됩니다.</p>                        </span></p>
+                        
+<span id='premier2' style='display:none;'>
+                                2번째 탭 메뉴
+                                
+네이버 뉴스
+</span>
+
+<span id='premier3' style='display:none;'>
+                                3번째 탭 메뉴
+</span>
+                        </td>
+                        <td width=1 bgcolor=#B7B19F></td>
+                </tr>
+                <tr><td colspan=3 bgcolor=#B7B19F></td></tr>
+                </table>
+        </td>
+</tr>
+<tr><td height=4></td></tr>
+</table>
+
+<script>
+premier(3);
+//괄호안에 숫자를 탭순서로 넣으면 그 탭이 활성화돼 열립니다
+</script>
+</body>
+</html>

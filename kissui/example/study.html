@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>animate css</title>
+<style>
+  /*reset*/
+*{margin:0; padding:0; box-sizing:border-box;}
+html,body,main{height:100%;}
+ol,ul{list-style:none;}
+
+/*common*/
+body{font-size:100%; font-family:"맑은 고딕";color:#333; line-height:1.2;}
+a{font-size:0.75em; font-family:"맑은 고딕";color:#666; text-decoration:none;}
+
+section{border:10px solid red;width:80%; margin:0 auto; height:auto;overflow:hidden;}
+section dl{width:50%;border:10px solid lightseagreen;float:left;}
+section dl dt{background:lightsteelblue;padding:30px 0;}
+section dl dd{background:rgb(211, 216, 223);padding:30px 0 150px;}
+</style>
+
+<!-- 
+<link rel="stylesheet" href="./css/kissui.css">
+<link rel="stylesheet" href="./css/custom.css"> 
+-->
+
+<link rel="stylesheet" href="../build/scrollanim.min.css">
+
+</head>
+<body>
+<section style="height:2000px;"></section>
+<section>
+   <dl data-kui-anim="fadeInLeft" style="animation-duration: 3s;animation-delay: 1s;">
+      <dt>주제</dt>
+      <dd>설명</dd>
+   </dl>
+   <dl data-kui-anim="bounce" style="animation-duration: 3s;animation-delay: 1s;">
+    <dt>주제</dt>
+    <dd>설명</dd>
+ </dl>
+</section>
+
+<!--이 이하의 js는 반드시 문서의 하단에 놓여있을것-->
+<script src='../build/scrollanim.js'></script>
+</body>
+</html>

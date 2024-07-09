@@ -1,0 +1,12 @@
+애니메이션 유형들 미리보기
+https://daneden.github.io/animate.css/
+
+다운로드
+https://github.com/usablica/kissui.scrollanim
+
+
+
+
+
+
+

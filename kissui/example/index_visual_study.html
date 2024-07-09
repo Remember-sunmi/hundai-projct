@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Kissui.scrollanim - CSS3 and JavaScript scroll animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="./css/kissui.css">
+  <link rel="stylesheet" href="./css/custom.css">
+  <link rel="stylesheet" href="../build/scrollanim.min.css">
+  <style>
+   .container{
+    position:relative;
+    border :1px solid red;
+   }
+
+    .ani1 {
+      animation-duration: 5s;
+      animation-delay: 3s;
+      /*animation-iteration-count: infinite;*/
+      position: absolute;
+      left: -200px;
+      top: 0;
+    }
+  </style>
+
+</head>
+
+<body>
+  <section style="height:2000px"></section>
+  <div class="container">
+    <div class="row">
+      <div>
+        <p data-kui-anim="fadeInLeft"  style="animation-duration: 5s;animation-delay: 1s;"><img src="./images/1.jpg" /></p>
+        <p data-kui-anim="fadeInLeft"  style="animation-duration: 5s;animation-delay: 2s;"><img src="./images/2.jpg" /></p>
+      </div>
+    </div>
+  </div>
+
+  <!--이 이하의 js는 반드시 문서의 하단에 놓여있을것-->
+  <script src='../build/scrollanim.js'></script>
+</body>
+
+</html>

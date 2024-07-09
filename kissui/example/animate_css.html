@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>animate css 적용해보기</title>
+<style>
+/*reset*/
+*{margin:0; padding:0; box-sizing:border-box;}
+html,body,main{height:100%;}
+ol,ul{list-style:none;}
+
+/*common*/
+body{font-size:100%; font-family:"맑은 고딕";color:#333; line-height:1.2;}
+a{font-size:0.75em; font-family:"맑은 고딕";color:#666; text-decoration:none;}
+
+#visual{width:100%;height:auto;border:5px solid black;}
+#visual #group{width:80%;height:auto;overflow:hidden;border:5px solid red;margin:0 auto;position:relative;}
+#visual #group div{width:30%;height:40vh;border:5px solid blue;float:left;margin-right:5%;}
+#visual #group div:last-child{margin-right:0%;}
+</style>
+
+<link rel="stylesheet" href="./css/kissui.css">
+<link rel="stylesheet" href="./css/custom.css">
+<link rel="stylesheet" href="../build/scrollanim.min.css">
+
+<style>
+  body{height:5000px;}
+   
+  #visual #group .box01 img{
+  animation-duration: 2s; /*애니메이션 진행 속도*/
+  animation-delay: 1s; /*delay(지연속도)*/
+  animation-iteration-count: 2;
+ /*position:absolute;
+ left:0;
+ top:0;*/
+  }
+ #visual #group .box02 {
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-iteration-count: 3;
+  position:absolute;
+  right:0;
+  top:0;
+  }
+  </style>
+
+</head>
+<body>
+<section id="visual">
+    <div id="group">
+		<div class="box01"><img src="./images/1.jpg" alt="캐릭터" data-kui-anim="fadeInLeft"></div>
+		<div class="box02" data-kui-anim="rotateIn"><img src="./images/2.jpg" alt="캐릭터"></div>
+		<div class="box03">여기는 글씨!!</div>
+	</div>
+</section>
+
+<!--이 이하의 js는 반드시 문서의 하단에 놓여있을것-->
+<script src='../build/scrollanim.js'></script>
+</body>
+</html>
